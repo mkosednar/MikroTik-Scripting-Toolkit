@@ -1,0 +1,17 @@
+# RouterOS exports and backups may contain sensitive configuration
+*.backup
+*.rsc.backup
+*.auto.rsc
+*.supout.rif
+
+# Local editor and operating-system files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.tmp
+
+# Local notes and test output
+local/
+scratch/
