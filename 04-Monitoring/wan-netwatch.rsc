@@ -5,9 +5,7 @@
 # Change the probe target if 1.1.1.1 is not suitable for your environment.
 
 # Creates one Netwatch entry. Review /tool netwatch before importing to avoid duplicates.
-/tool netwatch add host=1.1.1.1 interval=30s timeout=2s comment="Toolkit WAN reachability example" \
-    down-script=":log warning \"Toolkit: probe 1.1.1.1 is DOWN\"" \
-    up-script=":log info \"Toolkit: probe 1.1.1.1 is UP\""
+/tool netwatch add host=1.1.1.1 interval=30s timeout=2s comment="Toolkit WAN reachability example" down-script=":log warning \"Toolkit: probe 1.1.1.1 is DOWN\"" up-script=":log info \"Toolkit: probe 1.1.1.1 is UP\""
 
 # To inspect entries:
 # /tool netwatch print detail
