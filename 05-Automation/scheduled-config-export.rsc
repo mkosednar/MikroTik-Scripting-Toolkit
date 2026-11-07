@@ -5,10 +5,8 @@
 # Exports can disclose sensitive network information; protect and periodically remove them.
 # Verify syntax and export behavior on the exact RouterOS release before production use.
 
-# Creates a daily export at 03:00. The filename includes the router identity only if
-# supported by the target release; this conservative example uses a fixed filename.
-/system scheduler add name="toolkit-daily-export" start-time=03:00:00 interval=1d \
-    on-event="/export file=daily-config-export" policy=read,write,policy,test
+# Creates a daily export at 03:00 with a fixed filename.
+/system scheduler add name="toolkit-daily-export" start-time=03:00:00 interval=1d on-event="/export file=daily-config-export" policy=read,write,policy,test
 
 # Verify:
 # /system scheduler print detail
